@@ -42,4 +42,20 @@ public class TestTranslator {
         String actual = MorseCodeTranslator.fromMorse(testdata);
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void TestMorseToNumbers() {
+        String testdata = ".---- ..--- ...-- ....- ..... -.... --... ---.. ----. -----";
+        String expected = "1234567890";
+        String actual = MorseCodeTranslator.fromMorse(testdata);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void TestNumbersToMorse() {
+        String testdata = "1234567890";
+        String expected = ".---- ..--- ...-- ....- ..... -.... --... ---.. ----. -----";
+        String actual = MorseCodeTranslator.toMorse(testdata);
+        assertEquals(expected, actual);
+    }
 }
