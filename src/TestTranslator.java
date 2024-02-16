@@ -1,6 +1,7 @@
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 public class TestTranslator {
     @Test
@@ -42,6 +43,19 @@ public class TestTranslator {
         String actual = MorseCodeTranslator.fromMorse(testdata);
         assertEquals(expected, actual);
     }
+    @Test
+    public void TestInvalidCharacterInput() {
+        String testdata = "Hello!";
+        String expected = "Invalid character: !";
+        try {
+            MorseCodeTranslator.toMorse(testdata);
+            fail("Expected an IllegalArgumentException to be thrown");
+        } catch (IllegalArgumentException e) {
+            String actual = e.getMessage();
+            assertEquals(expected, actual);
+        }
+    }
+
 
     @Test
     public void TestMorseToNumbers() {
