@@ -32,6 +32,19 @@ public class MorseCodeHashmaps {
         TO_MORSE.put('X', "-..-");
         TO_MORSE.put('Y', "-.--");
         TO_MORSE.put('Z', "--..");
+        TO_MORSE.put('1', ".----");
+        TO_MORSE.put('2', "..---");
+        TO_MORSE.put('3', "...--");
+        TO_MORSE.put('4', "....-");
+        TO_MORSE.put('5', ".....");
+        TO_MORSE.put('6', "-....");
+        TO_MORSE.put('7', "--...");
+        TO_MORSE.put('8', "---..");
+        TO_MORSE.put('9', "----.");
+        TO_MORSE.put('0', "-----");
+        TO_MORSE.put('.', ".-.-.-");
+        TO_MORSE.put(',', "--..--");
+        TO_MORSE.put('?', "..--..");
 
         for (Map.Entry<Character, String> entry : TO_MORSE.entrySet()) {
             FROM_MORSE.put(entry.getValue(), entry.getKey());
